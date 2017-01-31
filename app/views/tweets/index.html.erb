@@ -1,0 +1,6 @@
+  <div class="contents row" >
+    <% @tweets.each do |tweet| %>
+      <%= render partial: "tweet", locals: { tweet: tweet } %> <!-- 一番右のtweetは直前で定義したeachで使う変数 -->
+    <% end %>
+    <%= paginate(@tweets) %>
+  </div>
